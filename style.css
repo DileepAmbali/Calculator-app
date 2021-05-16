@@ -29,6 +29,41 @@
     --White: hsl(0, 0, 100%);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 375px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid {
+    display: grid;
+}
+
+.header {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.theme-selctor {
+    display: grid;
+}
+
+.title {
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
