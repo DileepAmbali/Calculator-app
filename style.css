@@ -1,0 +1,38 @@
+:root {
+    font-size: 32px; /*numbers*/
+    font-weight: 700;
+    font-family: "Spartan", sans-serif;
+
+    /* THEME 1 */
+
+    /* Backgrounds */
+    --Very-Dark-Desaturated-Blue: hsl(222, 26%, 31%); /*main-background*/
+    --Very-Dark-Desaturated-Blue: hsl(
+        223,
+        31%,
+        20%
+    ); /*toggle and keypad-background */
+    --Very-Dark-Desaturated-Blue: hsl(224, 36%, 15%); /* screem-background*/
+
+    /* Keys */
+    --Desaturated-dark-blue: hsl(225, 21%, 49%); /*key-background*/
+    --Desaturated-dark-blue: hsl(224, 28%, 35%); /*-key-shadow*/
+
+    --Red: hsl(6, 63%, 50%); /*(key background, toggle) */
+    --Dark-red: hsl(6, 70%, 34%); /* (key shadow) */
+
+    --Light-grayish-orange: hsl(30, 25%, 89%); /* (key background)*/
+    --Grayish-orange: hsl(28, 16%, 65%); /*(key shadow)*/
+
+    /* Text */
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0, 100%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
