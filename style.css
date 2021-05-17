@@ -1,22 +1,22 @@
 :root {
-    font-size: 32px; /*numbers*/
-    font-weight: 700;
-    font-family: "Spartan", sans-serif;
-
     /* THEME 1 */
 
     /* Backgrounds */
     --Very-Dark-Desaturated-Blue: hsl(222, 26%, 31%); /*main-background*/
-    --Very-Dark-Desaturated-Blue: hsl(
+    --Very-Dark-Desaturated-Blue-key: hsl(
         223,
         31%,
         20%
     ); /*toggle and keypad-background */
-    --Very-Dark-Desaturated-Blue: hsl(224, 36%, 15%); /* screem-background*/
+    --Very-Dark-Desaturated-Blue-screen: hsl(
+        224,
+        36%,
+        15%
+    ); /* screem-background*/
 
     /* Keys */
     --Desaturated-dark-blue: hsl(225, 21%, 49%); /*key-background*/
-    --Desaturated-dark-blue: hsl(224, 28%, 35%); /*-key-shadow*/
+    --Desaturated-dark-blue-shadow: hsl(224, 28%, 35%); /*-key-shadow*/
 
     --Red: hsl(6, 63%, 50%); /*(key background, toggle) */
     --Dark-red: hsl(6, 70%, 34%); /* (key shadow) */
@@ -33,6 +33,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Spartan", sans-serif;
+}
+
+body {
+    background-color: #212121;
 }
 
 ul {
@@ -45,6 +50,7 @@ ul {
 
 .container {
     width: 375px;
+    height: 100vh;
     margin: 0 auto;
     flex-direction: column;
 }
@@ -58,19 +64,29 @@ ul {
     display: grid;
 }
 
+.calculator {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 667px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Very-Dark-Desaturated-Blue);
+    padding: 25px 20px;
+    padding-bottom: 30px;
+}
 .header {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1em;
+    color: white;
 }
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-.attribution a {
-    color: hsl(228, 45%, 44%);
+.result {
+    width: 100%;
+    color: white;
+    text-align: right;
 }
 
 .theme-selector {
@@ -100,4 +116,74 @@ ul {
 
 .slider {
     width: 100%;
+}
+
+.keypad {
+    display: grid;
+    padding: 25px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 17px 13px;
+    background-color: var(--Very-Dark-Desaturated-Blue-key);
+}
+
+.keys {
+    border-radius: 5px;
+    background-color: var(--Light-grayish-orange);
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-shadow: 0 5px var(--Grayish-orange);
+    font-size: 28px;
+    display: grid;
+    place-items: center;
+}
+
+.keys > p {
+    color: var(--Very-dark-grayish-blue);
+    transform: translateY(5px);
+}
+
+.special p {
+    transform: translateY(0px);
+}
+
+.blue {
+    background-color: var(--Desaturated-dark-blue);
+    box-shadow: 0 5px var(--Desaturated-dark-blue-shadow);
+}
+
+.red {
+    background-color: var(--Red);
+    box-shadow: 0 5px var(--Dark-red);
+}
+
+.reset {
+    grid-column: 1/3;
+}
+
+.equal {
+    grid-column: 3/5;
+}
+
+.special {
+    font-size: 16px;
+}
+
+.special p {
+    color: white;
+}
+
+.attribution {
+    position: absolute;
+    font-size: 11px;
+    text-align: center;
+    bottom: 0;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }

@@ -15,53 +15,57 @@
 </head>
 <body>
   <div class="container flex">
-    <div class="header flex">
-      <h3>calc</h3>
-      <div class="theme-selector">
-        <div class="title"><p>THEME</p></div>
-        <div class="choice">
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-          </ul>
-          <div class="selector">
-            <input type="range" min="1" max="3" value="1" class="slider">
+    <div class="calculator">
+      <div class="header flex">
+        <h5>calc</h5>
+        <div class="theme-selector">
+          <div class="title"><p>THEME</p></div>
+          <div class="choice">
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+            <div class="selector">
+              <input type="range" min="1" max="3" value="1" class="slider">
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="result">
-      12345
-    </div>
-    <div class="keypad grid">
-      <div>7</div>
-      <div>2</div>
-      <div>3</div>
-      <div></div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>+</div>
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>-</div>
-      <div>RESET</div>
-      <div> =  </div>
-      <div>.</div>
-      <div>0</div>
-      <div> / </div>
-      <div> x </div>
-    </div>
+      <div class="result">
+        12345
+      </div>
+      <div class="keypad">
+        <button class="keys"><p>7</p></button>  
+        <button class="keys"><p>8</p></button>  
+        <button class="keys"><p>9</p></button>
+        <button class="keys blue special"><p>DEL</p></button>
 
+        <button class="keys"><p>4</p></button>
+        <button class="keys"><p>5</p></button>
+        <button class="keys"><p>6</p></button>
+        <button class="keys"><p> + </p></button>
+      
+        <button class="keys"><p>1</p></button>
+        <button class="keys"><p>2</p></button>
+        <button class="keys"><p>3</p></button>
+        <button class="keys"><p> - </p></button>
 
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
+        <button class="keys"><p> . </p></button>
+        <button class="keys"><p>0</p></button>
+        <button class="keys"><p> / </p></button>
+        <button class="keys"><p> x </p></button>
+
+        <button class="keys blue reset special"><p>RESET</p></button>
+        <button class="keys red equal special"><p> = </p></button>
+
+      </div>
+    </div> 
   </div>
   
-  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
 </body>
 </html>
