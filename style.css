@@ -48,13 +48,6 @@ ul {
     padding: 0 5px;
 }
 
-.container {
-    width: 375px;
-    height: 100vh;
-    margin: 0 auto;
-    flex-direction: column;
-}
-
 .flex {
     display: flex;
     align-items: center;
@@ -64,17 +57,22 @@ ul {
     display: grid;
 }
 
+.container {
+    width: 375px;
+    height: 100vh;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
 .calculator {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 667px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    height: 667px;
     background-color: var(--Very-Dark-Desaturated-Blue);
-    padding: 25px 20px;
+    padding: 25px;
     padding-bottom: 30px;
 }
 .header {
@@ -87,6 +85,10 @@ ul {
     width: 100%;
     color: white;
     text-align: right;
+    background-color: var(--Very-Dark-Desaturated-Blue-screen);
+    font-size: 32px;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .theme-selector {
@@ -119,7 +121,9 @@ ul {
 }
 
 .keypad {
+    width: 100%;
     display: grid;
+    place-content: center;
     padding: 25px;
     padding-bottom: 30px;
     border-radius: 10px;
