@@ -81,15 +81,6 @@ ul {
     justify-content: space-between;
     color: white;
 }
-.result {
-    width: 100%;
-    color: white;
-    text-align: right;
-    background-color: var(--Very-Dark-Desaturated-Blue-screen);
-    font-size: 32px;
-    padding: 30px;
-    border-radius: 10px;
-}
 
 .theme-selector {
     display: grid;
@@ -118,6 +109,18 @@ ul {
 
 .slider {
     width: 100%;
+}
+
+.result {
+    width: 100%;
+    color: white;
+    text-align: right;
+    vertical-align: middle;
+    background-color: var(--Very-Dark-Desaturated-Blue-screen);
+    font-size: 32px;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 .keypad {
