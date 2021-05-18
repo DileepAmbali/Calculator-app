@@ -8,61 +8,63 @@
   <link rel='stylesheet' href="./style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <script src="./script.js" defer></script>
   
   <title>Frontend Mentor | Calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
-  <div class="container flex">
-    <div class="calculator">
-      <div class="header flex">
-        <h5 class="calc">calc</h5>
-        <div class="theme-selector">
-          <div class="title"><p>THEME</p></div>
-          <div class="choice">
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-            </ul>
-            <div class="selector">
-              <input type="range" min="1" max="3" value="1" class="slider">
+  <div class="theme2">
+    <div class="container flex">
+      <div class="calculator">
+        <div class="header flex">
+          <h5 class="calc">calc</h5>
+          <div class="theme-selector">
+            <div class="title"><p>THEME</p></div>
+            <div class="choice">
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+              <div class="selector">
+                <input type="range" min="1" max="3" value="1" id="slider" onchange="get_value()">
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="result">
-        <p>399,981</p> 
-      </div>
-      <div class="keypad">
-        <button class="keys"><p>7</p></button>  
-        <button class="keys"><p>8</p></button>  
-        <button class="keys"><p>9</p></button>
-        <button class="keys blue special"><p>DEL</p></button>
+        <div class="result">
+          <p>399,981</p> 
+        </div>
+        <div class="keypad">
+          <button class="keys"><p>7</p></button>  
+          <button class="keys"><p>8</p></button>  
+          <button class="keys"><p>9</p></button>
+          <button class="keys fun special"><p>DEL</p></button>
 
-        <button class="keys"><p>4</p></button>
-        <button class="keys"><p>5</p></button>
-        <button class="keys"><p>6</p></button>
-        <button class="keys"><p> + </p></button>
-      
-        <button class="keys"><p>1</p></button>
-        <button class="keys"><p>2</p></button>
-        <button class="keys"><p>3</p></button>
-        <button class="keys"><p> - </p></button>
+          <button class="keys"><p>4</p></button>
+          <button class="keys"><p>5</p></button>
+          <button class="keys"><p>6</p></button>
+          <button class="keys"><p> + </p></button>
+        
+          <button class="keys"><p>1</p></button>
+          <button class="keys"><p>2</p></button>
+          <button class="keys"><p>3</p></button>
+          <button class="keys"><p> - </p></button>
 
-        <button class="keys"><p> . </p></button>
-        <button class="keys"><p>0</p></button>
-        <button class="keys"><p> / </p></button>
-        <button class="keys"><p> x </p></button>
+          <button class="keys"><p> . </p></button>
+          <button class="keys"><p>0</p></button>
+          <button class="keys"><p> / </p></button>
+          <button class="keys"><p> x </p></button>
 
-        <button class="keys blue reset special"><p>RESET</p></button>
-        <button class="keys red equal special"><p> = </p></button>
+          <button class="keys fun reset special"><p>RESET</p></button>
+          <button class="keys equal special"><p> = </p></button>
 
-      </div>
-    </div> 
+        </div>
+      </div> 
+    </div>
   </div>
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.

@@ -36,9 +36,7 @@
     font-family: "Spartan", sans-serif;
 }
 
-body {
-    background-color: #212121;
-}
+/* THEME 1 */
 
 ul {
     list-style-type: none;
@@ -60,6 +58,11 @@ ul > li {
     display: grid;
 }
 
+.theme1 {
+    background-color: var(--Very-Dark-Desaturated-Blue);
+}
+
+/* Sets the min width of the calculator, in this case 375px */
 .container {
     width: 375px;
     height: 100vh;
@@ -67,25 +70,22 @@ ul > li {
     flex-direction: column;
 }
 
+/* The base size and shape of the calculator */
 .calculator {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
-    height: 667px;
-    background-color: var(--Very-Dark-Desaturated-Blue);
     padding: 20px 25px 30px 25px;
-    /* padding: 25px;
-    padding-bottom: 30px; */
 }
+
+/* The top section of the calclator UI */
 .header {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
     color: white;
     font-size: 38px;
-
     margin-bottom: 30px;
 }
 
@@ -134,7 +134,7 @@ ul > li {
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
 }
-.slider {
+#slider {
     text-align: center;
     vertical-align: middle;
     height: 25px;
@@ -154,18 +154,18 @@ ul > li {
     opacity: 1;
 }
 
-.slider::-webkit-slider-thumb {
+#slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 15px;
     height: 15px;
     outline: none;
     border: none;
-    background: var(--Red);
+    background: hsl(6, 63%, 50%);
     cursor: pointer;
 }
 
-.slider::-moz-range-thumb {
+#slider::-moz-range-thumb {
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -177,7 +177,6 @@ ul > li {
 
 .result {
     width: 100%;
-
     background-color: var(--Very-Dark-Desaturated-Blue-screen);
     padding: 23px;
     border-radius: 10px;
@@ -225,14 +224,9 @@ ul > li {
     transform: translateY(0px);
 }
 
-.blue {
+.fun {
     background-color: var(--Desaturated-dark-blue);
     box-shadow: 0 5px var(--Desaturated-dark-blue-shadow);
-}
-
-.red {
-    background-color: var(--Red);
-    box-shadow: 0 5px var(--Dark-red);
 }
 
 .reset {
@@ -241,6 +235,8 @@ ul > li {
 
 .equal {
     grid-column: 3/5;
+    background-color: var(--Red);
+    box-shadow: 0 5px var(--Dark-red);
 }
 
 .special {
@@ -249,6 +245,50 @@ ul > li {
 
 .special p {
     color: white;
+}
+
+/* THEME 2 */
+.theme2 {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.theme2 .header {
+    color: hsl(60, 10%, 19%);
+}
+
+.theme2 .selector {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.theme2 #slider::-webkit-slider-thumb,
+.theme2 #slider::-moz-range-thumb {
+    background: hsl(25, 98%, 40%);
+}
+
+.theme2 .result {
+    background-color: hsl(0, 0%, 93%);
+}
+
+.theme2 .result p {
+    color: hsl(60, 10%, 19%);
+}
+
+.theme2 .keypad {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.theme2 .keys {
+    background-color: hsl(45, 7%, 89%);
+    box-shadow: hsl(35, 11%, 61%);
+}
+
+.theme2 .fun {
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: hsl(185, 58%, 25%);
+}
+.theme2 .equal {
+    background-color: hsl(25, 98%, 40%);
+    box-shadow: hsl(25, 99%, 27%);
 }
 
 .attribution {
