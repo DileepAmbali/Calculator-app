@@ -15,11 +15,11 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
-  <div class="theme2">
+  <div class="theme1" id="themes">
     <div class="container flex">
       <div class="calculator">
         <div class="header flex">
-          <h5 class="calc">calc</h5>
+          <p class="calc">calc</p>
           <div class="theme-selector">
             <div class="title"><p>THEME</p></div>
             <div class="choice">
@@ -29,7 +29,7 @@
                 <li>3</li>
               </ul>
               <div class="selector">
-                <input type="range" min="1" max="3" value="1" id="slider" onchange="get_value()">
+                <input type="range" min="1" max="3" value="1" id="slider" oninput="change_theme()">
               </div>
             </div>
           </div>

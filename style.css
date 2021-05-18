@@ -1,4 +1,5 @@
 :root {
+    --transition-length: 1s;
     /* THEME 1 */
 
     /* Backgrounds */
@@ -34,20 +35,24 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Spartan", sans-serif;
+    transition-property: color, background, box-shadow;
+    transition-duration: var(--transition-length);
 }
-
-/* THEME 1 */
 
 ul {
     list-style-type: none;
     display: flex;
     font-size: 12px;
-    /* padding: 0 5px; */
 }
 
 ul > li {
     margin: 8px;
 }
+
+/* p {
+    transition-property: color;
+    transition-duration: var(--transition-length);
+} */
 
 .flex {
     display: flex;
@@ -58,9 +63,10 @@ ul > li {
     display: grid;
 }
 
-.theme1 {
+/* .theme1 {
     background-color: var(--Very-Dark-Desaturated-Blue);
-}
+    transition: var(--transition-length);
+} */
 
 /* Sets the min width of the calculator, in this case 375px */
 .container {
@@ -90,6 +96,7 @@ ul > li {
 }
 
 .calc {
+    font-size: 30px;
     padding-top: 5px;
     transform: translateY(-2px);
 }
@@ -131,8 +138,8 @@ ul > li {
     background-color: hsl(223, 31%, 20%);
     border-radius: 1em;
     opacity: 0.7;
-    -webkit-transition: 0.2s;
-    transition: opacity 0.2s;
+    -webkit-transition: 0.1s;
+    transition: opacity 0.1s;
 }
 #slider {
     text-align: center;
@@ -205,28 +212,25 @@ ul > li {
 
 .keys {
     border-radius: 5px;
-    background-color: var(--Light-grayish-orange);
     outline: none;
     border: none;
     text-decoration: none;
-    box-shadow: 0 5px var(--Grayish-orange);
     font-size: 28px;
     display: grid;
     place-items: center;
 }
 
-.keys > p {
-    color: var(--Very-dark-grayish-blue);
+.keys:hover {
+    opacity: 0.8;
+}
+
+.keys:active {
+    opacity: 0.9;
     transform: translateY(5px);
 }
 
-.special p {
-    transform: translateY(0px);
-}
-
-.fun {
-    background-color: var(--Desaturated-dark-blue);
-    box-shadow: 0 5px var(--Desaturated-dark-blue-shadow);
+.keys > p {
+    transform: translateY(5px);
 }
 
 .reset {
@@ -235,8 +239,6 @@ ul > li {
 
 .equal {
     grid-column: 3/5;
-    background-color: var(--Red);
-    box-shadow: 0 5px var(--Dark-red);
 }
 
 .special {
@@ -244,12 +246,64 @@ ul > li {
 }
 
 .special p {
+    transform: translateY(1px);
+}
+
+/* THEME1 */
+
+.theme1 {
+    background-color: hsl(222, 26%, 31%);
+}
+
+.theme1 .header {
+    color: white;
+}
+
+.theme1 .selector {
+    background-color: hsl(223, 31%, 20%);
+}
+
+.theme1 #slider::-webkit-slider-thumb,
+.theme1 #slider::-moz-range-thumb {
+    background: hsl(6, 63%, 50%);
+}
+.theme1 .result {
+    background-color: hsl(224, 36%, 15%);
+}
+.theme1 .result p {
+    color: white;
+}
+
+.theme1 .keypad {
+    background-color: hsl(223, 31%, 20%);
+}
+
+.theme1 .keys {
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: 0 5px hsl(28, 16%, 65%);
+    /* transition: 1s; */
+}
+
+.theme1 .keys p {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.theme1 .fun {
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 5px hsl(224, 28%, 35%);
+}
+.theme1 .equal {
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0 5px hsl(6, 70%, 34%);
+}
+.theme1 .special p {
     color: white;
 }
 
 /* THEME 2 */
 .theme2 {
     background-color: hsl(0, 0%, 90%);
+    /* transition: var(--transition-length); */
 }
 
 .theme2 .header {
@@ -279,16 +333,83 @@ ul > li {
 
 .theme2 .keys {
     background-color: hsl(45, 7%, 89%);
-    box-shadow: hsl(35, 11%, 61%);
+    box-shadow: 0 5px hsl(35, 11%, 61%);
+}
+
+.theme2 .keys p {
+    color: hsl(60, 10%, 19%);
 }
 
 .theme2 .fun {
     background-color: hsl(185, 42%, 37%);
-    box-shadow: hsl(185, 58%, 25%);
+    box-shadow: 0 5px hsl(185, 58%, 25%);
 }
 .theme2 .equal {
     background-color: hsl(25, 98%, 40%);
-    box-shadow: hsl(25, 99%, 27%);
+    box-shadow: 0 5px hsl(25, 99%, 27%);
+}
+.theme2 .special p {
+    color: white;
+}
+
+/* THEME 3 */
+
+.theme3 {
+    background-color: hsl(268, 75%, 9%);
+    /* transition: var(--transition-length); */
+}
+
+.theme3 .header {
+    color: hsl(52, 100%, 62%);
+}
+
+.theme3 .selector {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.theme3 #slider::-webkit-slider-thumb,
+.theme3 #slider::-moz-range-thumb {
+    background: hsl(176, 100%, 44%);
+}
+
+.theme3 .result {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.theme3 .result p {
+    color: hsl(52, 100%, 62%);
+}
+
+.theme3 .keypad {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.theme3 .keys {
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0 5px hsl(290, 70%, 36%);
+}
+
+.theme3 .keys p {
+    color: hsl(52, 100%, 62%);
+}
+
+.theme3 .fun {
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: 0 5px hsl(285, 91%, 52%);
+}
+
+.theme3 .fun p {
+    color: white;
+}
+
+.theme3 .equal {
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0 5px hsl(177, 92%, 70%);
+    color: hsl(198, 20%, 13%);
+}
+
+.theme3 .equal p {
+    color: hsl(198, 20%, 13%);
 }
 
 .attribution {
