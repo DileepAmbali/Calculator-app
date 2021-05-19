@@ -39,10 +39,6 @@
     transition-duration: var(--transition-length);
 }
 
-html {
-    background-color: rgb(0, 0, 0);
-}
-
 ul {
     list-style-type: none;
     display: flex;
@@ -67,11 +63,11 @@ ul > li {
     display: grid;
 }
 
-.theme1,
+/* .theme1,    
 .theme2,
 .theme3 {
-    min-height: 670px;
-}
+    min-height: 200vh;
+} */
 
 /* Sets the min width of the calculator, in this case 375px */
 .container {
@@ -505,4 +501,12 @@ ul > li {
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-height: 670px) {
+    .theme1,
+    .theme2,
+    .theme3 {
+        min-height: 100vh;
+    }
 }
