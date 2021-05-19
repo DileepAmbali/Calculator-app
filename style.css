@@ -325,10 +325,17 @@ ul > li {
     color: white;
 }
 
+.theme1 .attribution {
+    color: white;
+}
+
+.theme1 .attribution a {
+    color: wheat;
+}
+
 /* THEME 2 */
 .theme2 {
     background-color: hsl(0, 0%, 90%);
-    /* transition: var(--transition-length); */
 }
 
 .theme2 .calc {
@@ -342,10 +349,6 @@ ul > li {
 .theme2 .choice li {
     color: hsl(60, 10%, 19%);
 }
-
-/* .theme2 .header {
-    color: hsl(60, 10%, 19%);
-} */
 
 .theme2 .selector {
     background-color: hsl(0, 5%, 81%);
@@ -392,11 +395,18 @@ ul > li {
     color: white;
 }
 
+.theme2 .attribution {
+    color: hsl(60, 10%, 19%);
+}
+
+.theme2 .attribution a {
+    color: hsl(25, 98%, 40%);
+}
+
 /* THEME 3 */
 
 .theme3 {
     background-color: hsl(268, 75%, 9%);
-    /* transition: var(--transition-length); */
 }
 
 .theme3 .calc {
@@ -465,6 +475,14 @@ ul > li {
 
 .theme3 .equal p {
     color: hsl(198, 20%, 13%);
+}
+
+.theme3 .attribution {
+    color: hsl(52, 100%, 62%);
+}
+
+.theme3 .attribution a {
+    color: hsl(176, 100%, 44%);
 }
 
 .attribution {
