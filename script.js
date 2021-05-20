@@ -45,10 +45,10 @@ class Calculator {
                 computation = prev - curr
                 break
             case 'x':
-                computation = prev * curr
+                computation = +(prev * curr).toFixed(4)
                 break
             case '/':
-                computation = prev / curr
+                computation = +(prev / curr).toFixed(4)
                 break
             default:
                 return
