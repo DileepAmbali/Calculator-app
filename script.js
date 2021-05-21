@@ -10,6 +10,7 @@ class Calculator {
         this.previousOperant = ''
         this.operation = undefined
         this.updateDisplay()
+        this.isResult = false
     }
 
     delete(){
@@ -97,8 +98,10 @@ const currentOperantTextElement = document.querySelector('[data-current-operant]
 
 
 const calculator = new Calculator (previousOperantTextElement,currentOperantTextElement)
+
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
+        if(calculator.isResult === true){calculator.reset()}
         calculator.appendNumber(button.innerText)
         calculator.updateDisplay()   
     })
@@ -117,9 +120,11 @@ resetButton.addEventListener('click',() => {
 
 equalButton.addEventListener('click',() => {
     calculator.compute()
+    calculator.isResult = true
 })
 
 deleteButton.addEventListener('click',() => {
+    if(calculator.isResult === true){calculator.reset()}
     calculator.delete()
 })
 
